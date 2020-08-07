@@ -2,7 +2,6 @@
 
 
 function buttonClicked(){ 
-        alert("hjajjaj");     
         let username_value = document.getElementById("username").value;
         let email_value = document.getElementById("email").value;
         let password_value = document.getElementById("password").value;
@@ -41,7 +40,9 @@ class CheckInputs{
         let username_length = (this.username).length;
         if (username_length < 4 ){
             document.querySelector("#username").className = "input-error" ;
-            document.querySelector("small").className = "small-error"; //   NEEDS TO BE UPDATED LATER ON
+            document.querySelector(".username").className = "small-error"; 
+        }else{
+            document.querySelector("#username").className = "input-success";
         }
     }
 
@@ -56,8 +57,9 @@ class CheckInputs{
         
         if (flag === false){
             document.querySelector("#email").className = "input-error";
-            document.querySelector("small").className = "small-error"; //   NEEDS TO BE UPDATED LATER ON
-        
+            document.querySelector(".email").className = "small-error"; 
+        }else{
+            document.querySelector("#email").className = "input-success";
         }
         
     }
@@ -66,16 +68,16 @@ class CheckInputs{
         let password_length = this.password.length;
         if (password_length > 8 && password_length < 18){
             if (this.password===this.password1){
-                null;
+                document.querySelector("#password").className = "input-success";
+                document.querySelector("#password1").className = "input-success";    
             }else{
                 document.querySelector("#password1").className = "input-error";    
             }
                    
         }else{
             document.querySelector("#password").className = "input-error";
-            document.querySelector("#password1").className = "input-error"
-            // document.querySelector("small").className = "small-error"; //   NEEDS TO BE UPDATED LATER ON
-        }
+            document.querySelector("#password1").className = "input-error";
+            document.querySelector(".password").className = "small-error";         }
     }
 
 }
