@@ -109,7 +109,7 @@ form .btn:hover{
 
 .small-error{
     color: var(--error-color)!important;
-    position: absolute;
-    visibility: visible;
+    position: absolute!important;
+    visibility: visible!important;
 
 }
