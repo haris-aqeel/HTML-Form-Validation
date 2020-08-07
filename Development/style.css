@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+:root{
+    --success-color: lightgreen;
+    --error-color: orangered;
+}
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(209, 202, 202, 0.1);
+    font-family: 'Open Sans', sans-serif;
+    
+    
+}
+
+.container{
+    background-color: rgb(255, 255, 255);
+    padding: 30px 30px;
+    border-radius: 8px;
+    box-shadow: 3px 3px lightgray; 
+    width: 400px;
+}
+
+form h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 26px;
+    font-weight: bold;
+}
+
+form .form-control{
+    margin-bottom: 10px;
+    padding-bottom: 30px;
+    position: relative;
+    
+}
+
+form .form-control label{
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;;
+}
+
+form .form-control input {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    outline: none;
+    border: black 1px solid;
+    font-size: 16px;
+    display: block;
+}
+
+form .form-control input:focus {
+    width: 100%;
+    padding: 8px;
+    border-radius: 8px;
+    outline: none;
+    border: grey 3px solid;
+    font-size: 16px;
+    display: block;
+}
+
+
+
+form .form-control small{
+    position: absolute;
+    visibility: hidden;
+    
+}
+
+form .btn{
+    font-size: 16px;
+    background-color: cornflowerblue;
+    border: 2px solid cornflowerblue;
+    color: #FFF;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    padding: 8px;
+    border-radius: 12px;
+        
+}
+
+form .btn:hover{
+    background-color: #fff;
+    color: cornflowerblue;
+}
+
+.input-success{
+    border: var(--success-color) 2px solid!important;
+    
+}
+
+.input-error{
+    border: var(--error-color) 2px solid!important;
+}
+
+.small-error{
+    color: var(--error-color)!important;
+    position: absolute;
+    visibility: visible;
+
+}
